@@ -1,0 +1,82 @@
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+
+.weekly-calender-prt {
+    display: block;
+}
+.weekly-rightsec {
+    margin-top: 10px;
+}
+
+}
+
+
+/*991 start*/
+@media only screen and (max-width: 991px) {
+
+.checkouts-btn {
+    margin-bottom: 10px;
+}
+.checkouts-color-btns {
+    display: block;
+}
+.weekly-calender-prt {
+    display: block;
+}
+.dash-refresh-table {
+    margin: 0;
+}
+.weekly-rightsec {
+    margin-top: 10px;
+}
+.dash-refresh-div {
+    padding: 0;
+}
+
+
+}
+/*991 end*/
+
+/*767 start*/
+@media only screen and (max-width: 767px) {
+
+	.funaia-innerbox {
+    width: 100%;
+}
+.Dis-key-circle {
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+}
+.dis-key-label {
+    display: block;
+}
+.dis-key-inwidth1 {
+    width: 100%;
+}
+.dis-key-inwidth2 {
+    width: 100%;
+}
+.mobile-sidev-toggle{
+    display: block;
+}
+.close-btn-mobile {
+   display: block;
+}
+.funaiio-sidebar {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.checkouts-btn {
+    width: 100%;
+}
+.weekly-rightsec {
+    padding: 20px 20px;
+    width: 100%;
+}
+
+}
+
+/*767 end*/

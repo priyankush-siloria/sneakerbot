@@ -1,0 +1,136 @@
+.pickmeup {
+	background: rgb(2,0,36);
+    background: linear-gradient(305deg, rgba(2,0,36,1) 0%, rgba(83,82,122,1) 35%, rgba(63,63,101,1) 100%);
+	/*border-radius: .4em;*/
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	display: inline-block;
+	position: absolute;
+	touch-action: manipulation
+}
+
+.pickmeup * {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.pickmeup.pmu-flat {
+	position: relative
+}
+
+.pickmeup.pmu-hidden {
+	display: none
+}
+
+.pickmeup .pmu-instance {
+	display: inline-block;
+	height: 16em;
+	padding: .5em;
+	text-align: center;
+	width: 17em
+}
+
+.pickmeup .pmu-instance .pmu-button {
+	color: #eee;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none
+}
+
+.pickmeup .pmu-instance .pmu-today {
+    background: #3f405e;
+    color: #eee;
+}
+
+.pickmeup .pmu-instance .pmu-button:hover {
+	background: transparent;
+	color: #eee
+}
+
+.pickmeup .pmu-instance .pmu-not-in-month {
+	color: #666
+}
+
+.pickmeup .pmu-instance .pmu-disabled,
+.pickmeup .pmu-instance .pmu-disabled:hover {
+	color: #333;
+	cursor: default
+}
+
+.pickmeup .pmu-instance .pmu-selected {
+	background: #9a78e4;
+	color: #eee
+}
+
+.pickmeup .pmu-instance .pmu-not-in-month.pmu-selected {
+	background: #3f405e
+}
+
+.pickmeup .pmu-instance nav {
+	color: #eee;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	line-height: 2em;
+	justify-content: center;
+}
+
+.pickmeup .pmu-instance nav *:first-child :hover {
+	color: #88c5eb
+}
+
+.pickmeup .pmu-instance nav .pmu-prev,
+.pickmeup .pmu-instance nav .pmu-next {
+	display: none;
+	height: 2em;
+	width: 1em
+}
+
+.pickmeup .pmu-instance nav .pmu-month {
+	width: 14em
+}
+
+.pickmeup .pmu-instance .pmu-years *,
+.pickmeup .pmu-instance .pmu-months * {
+	display: inline-block;
+	line-height: 3.6em;
+	width: 3.5em
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week {
+	color: #999;
+	cursor: default
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week *,
+.pickmeup .pmu-instance .pmu-days * {
+	display: inline-block;
+	line-height: 1.9em;
+	width: 2.2em;
+	border-radius: 4px;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week * {
+	line-height: 1.8em
+}
+
+.pickmeup .pmu-instance:first-child .pmu-prev,
+.pickmeup .pmu-instance:last-child .pmu-next {
+	display: block
+}
+
+.pickmeup .pmu-instance:first-child .pmu-month,
+.pickmeup .pmu-instance:last-child .pmu-month {
+	width: 13em
+}
+
+.pickmeup .pmu-instance:first-child:last-child .pmu-month {
+	width: 12em
+}
+
+.pickmeup:not(.pmu-view-days) .pmu-days,
+.pickmeup:not(.pmu-view-days) .pmu-day-of-week,
+.pickmeup:not(.pmu-view-months) .pmu-months,
+.pickmeup:not(.pmu-view-years) .pmu-years {
+	display: none
+}

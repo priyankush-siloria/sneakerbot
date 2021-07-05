@@ -1,0 +1,264 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="funAIO-main">
+        <div class="funaiio-sidebarcol">
+            <div class="funaiio-sidebar">
+                <div class="close-btn-mobile"><i class="fas fa-times close-icon"></i></div>
+                <a href="/" class="">
+					<figure class="black-center-img text-center">
+						<img src="{% static 'images/logo.png' %}" class="sidenav-logo"/>
+					</figure> 
+                </a>
+                <div class="dropdown new-task-dropdwn">
+                    <a href="#" class="dropdown-toggle new-task-dropdwna" id="newtask" data-bs-toggle="dropdown" aria-expanded="false">
+                       <i class="fas fa-plus"></i> New Task Group
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="newtask">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">New 2</a></li>
+                        <li><a class="dropdown-item" href="#">New 2</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Cancel</a></li>
+                    </ul>
+                </div>
+                <h3 class="sidenav-hding-h3">Dashboard</h3>
+                <ul class="sidnav-ul" id="menu">
+                    <li class="sidnav-ul-li">
+                        <a href="#submenu1" data-bs-toggle="collapse" class="sidenav-links">
+                           Task Groups <i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="configure-ul collapse" id="submenu1" data-bs-parent="#menu">
+                            <li class="configure-li">
+                                <a href="#" class="configure-a active">
+                                    <p class="snkrs-p">SNKRS</p>
+                                    <span class="snkrs-500">500</span>
+                                 </a>
+                            </li>
+                            <li class="configure-li">
+                                <a href="#" class="configure-a">
+                                    <p class="snkrs-p">Adidas</p>
+                                    <span class="snkrs-500">300</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidnav-ul-li">
+                        <a href="#submenu2" data-bs-toggle="collapse" class="sidenav-links">
+                           Configure <i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="configure-ul collapse" id="submenu2" data-bs-parent="#menu">
+                            <li class="configure-li">
+                                <a href="#" class="configure-a">
+                                	<p class="snkrs-p">Accounts</p>
+                                	<span class="snkrs-500">100</span>
+                                </a>
+                            </li>
+                            <li class="configure-li">
+                                <a href="#" class="configure-a">
+                                    <p class="snkrs-p">Proxies</p>
+                                    <span class="snkrs-500">1000</span>
+                                </a>
+                            </li>
+                            <li class="configure-li">
+                                <a href="#" class="configure-a">
+                                    <p class="snkrs-p">Payment</p>
+                                    <span class="snkrs-500">30</span>
+                                </a>
+                            </li>
+                            <li class="configure-li">
+                                <a href="#" class="configure-a">
+                                    <p class="snkrs-p">Address</p>
+                                    <span class="snkrs-500">111</span>
+								</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="funaio-text-wrapper">
+            <!-- toggle for mobile -->
+            <div class="mobile-sidev-toggle"><i class="fas fa-bars toggle-bar"></i></div>
+
+            <div class="weekly-calender-main">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="dash-weekly-inner">
+                            <div class="dash-refresh-div">
+                            <h3 class="section-hding">Dashboard</h3>
+                            <span class="refresh-icon"><i class="fas fa-sync-alt refresh-icon-i"></i></span>
+                            </div>
+
+                            <div class="dash-refresh-form">
+                                <ul class="dash-refresh-ul">
+                                    <li class="dash-refresh-li">
+                                      <label class="dash-refresh-label" for="discord">License:</label>
+                                      <input class="dash-refresh-input" type="text" id="discord" name="discord">
+                                    </li>
+
+                                    <li class="dash-refresh-li">
+                                      <label class="dash-refresh-label" for="discord">Webhook:</label>
+                                      <input class="dash-refresh-input" type="text" id="discord" name="discord">
+                                    </li>
+
+                                    <li class="dash-refresh-li">
+                                      <label class="dash-refresh-label" for="discord">retry delay:</label>
+                                      <input class="dash-refresh-input" type="text" id="discord" name="discord">
+                                    </li>
+
+                                    <li class="dash-refresh-li">
+                                      <label class="dash-refresh-label" for="discord">monitor:</label>
+                                      <input class="dash-refresh-input" type="text" id="discord" name="discord">
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="dash-weekly-inner">
+                            <div class="dash-refresh-div">
+                            <h3 class="section-hding">Weekly calender</h3>
+                            </div>
+                             <div class="weekly-calender-prt">
+                                 <article>
+                                    <div class="range"></div>
+                                </article>
+
+                                <div class="weekly-rightsec">
+                                    <ul class="kith-x-ul">
+                                        <li class="kith-x-li">
+                                            <figure class="kith-x-figure">
+                                                <img src="{% static 'images/calender-list-1.png' %}" class="kith-x-img"/>
+                                            </figure>
+                                            <div class="kith-x-content">
+                                                <h6 class="kith-x-h6">kith x coke truck</h6>
+                                                <a href="#" class="kith-x-details">see details <i class="fas fa-arrow-right kith-rytarw"></i></a>
+                                            </div>
+                                        </li>
+
+                                        <li class="kith-x-li">
+                                            <figure class="kith-x-figure">
+                                                <img src="{% static 'images/calender-list-1.png' %}" class="kith-x-img"/>
+                                            </figure>
+                                            <div class="kith-x-content">
+                                                <h6 class="kith-x-h6">Jordan 5</h6>
+                                                <a href="#" class="kith-x-details">see details <i class="fas fa-arrow-right kith-rytarw"></i></a>
+                                            </div>
+                                        </li>
+
+                                        <li class="kith-x-li">
+                                            <figure class="kith-x-figure">
+                                                <img src="{% static 'images/calender-list-1.png' %}" class="kith-x-img"/>
+                                            </figure>
+                                            <div class="kith-x-content">
+                                                <h6 class="kith-x-h6">AJ1 Zoom green</h6>
+                                                <a href="#" class="kith-x-details">see details <i class="fas fa-arrow-right kith-rytarw"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                             </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkouts-color-btns">
+                <button class="checkouts-btn purple-clr"><span class="checkouts-txt">173</span> <span class="checkouts-spn">checkouts</span></button>
+                <button class="checkouts-btn sky-blue-clr"><span class="checkouts-txt">$5.12K</span> <span class="checkouts-spn">spending</span></button>
+                <button class="checkouts-btn red-clr"><span class="checkouts-txt">173</span> <span class="checkouts-spn">decline</span></button>
+            </div>
+
+            <div class="dash-refresh-table">
+                <div class="table-responsive">
+					<table id="dash-refresh-table" class="display">
+						<tbody>
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+							<tr class="dash-ref-tabletr">
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">1</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Yeezy Supply</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">FX9034</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Random</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Resi</p></td>
+								<td class="dash-rf-td"><p class="dash-refresh-tablep">Main Debit</p></td>
+								<td class="dash-rf-td"><p class="checkout-success">Checkout success</p></td>
+								<td class="dash-rf-td"><span class="dash-ref-delicon"><i class="fas fa-trash"></i></span></td>
+							</tr>
+						</tbody>
+					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
