@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="{% static 'css/pickmeup.css' %}" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/datatables.min.css' %}"/>
+		<title>FunAIO</title>
+		{% block title %} {% endblock %}
+   </head>
+   {% block css %}
+   {% endblock css %}
+   <body>
+		
+		{% block content %}
+		{% endblock %}
+
+      	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/calender.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/pickmeup.js' %}"></script> 
+		<script type="text/javascript" src="{% static 'js/datatables.min.js' %}"></script>
+		<script>
+			$(document).ready(function(){
+				$(".mobile-sidev-toggle").click(function(){
+				$(".funaiio-sidebar").toggle();
+				});
+			});
+
+			$(".close-btn-mobile").click(function(){
+				$(".funaiio-sidebar").hide();
+			});
+        </script>
+      {% block js %}
+      {% endblock js %}
+   	</body>
+</html>

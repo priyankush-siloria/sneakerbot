@@ -1,0 +1,74 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+{% block content %}
+<div class="center-funaio">
+	<div class="container">
+		<div class="funaia-innerbox">
+		<figure class="black-center-img">
+			<img src="{% static 'images/logo.png' %}" class="logo-imgcntr"/>
+		</figure>
+
+		<div class="Dis-key-circle">
+			<form class="dis-key-form" method="POST">
+				{% csrf_token %}
+				<div class="dis-key-div">
+					<label class="dis-key-label" for="discord">discord:</label>
+					<input class="dis-key-input dis-key-inwidth1" type="text" id="client_id" name="client_id" required>
+				</div>
+				<div class="dis-key-div">
+					<label class="dis-key-label" for="key">key:</label>
+					<input class="dis-key-input dis-key-inwidth2" type="text" id="client_secret" name="client_secret" required>
+				</div>
+			</form>
+		</div>
+		<p class="funaio-loading" hidden>Loading ....</p>
+		<p id="message"></p>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+
+<script>
+	$('.dis-key-input').keypress(function (e) {
+  		if (e.which == 13) {
+			var client_id = $('#client_id').val();
+			var client_secret = $('#client_secret').val();
+			$.ajax({
+				method: 'POST',
+				url: "{% url 'login' %}",
+				data: {
+					'client_id': client_id,
+					'client_secret': client_secret
+				},
+				headers: {
+					'X-CSRFToken': "{{ csrf_token }}"
+				},
+				dataType: 'json',
+				beforeSend: function() {
+					$('.funaio-loading').removeAttr('hidden')
+				},
+				success: function (res) {
+					console.log(res, "success")
+					if(res.status == true) {
+						$('.funaio-loading').hide()
+						var message = 'Data was succesfully captured';
+						$("#message").text(message);
+						window.location.href = "dashboard"
+					} else {
+						$('.funaio-loading').hide()
+					}
+				},
+				error: function(data) {
+                	var message = 'Error';
+                	$("#message").text(message);
+					console.log(data, "error fuction")
+					$('.funaio-loading').hide()
+            	},
+			})
+    		return false;
+  		}
+	});
+</script>
+
+{% endblock js %}
