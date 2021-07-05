@@ -1,0 +1,13 @@
+/__pycache__/
+venv/
+venv/bin
+venv/build
+venv/include
+venv/lib
+venv/local
+*.pyc
+.env-*
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
+branch_structure.json
